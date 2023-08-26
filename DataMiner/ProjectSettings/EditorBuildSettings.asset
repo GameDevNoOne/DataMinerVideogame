@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/Hacking1.unity
+    guid: 5995724677ba36246b7cf3804647dee7
+  - enabled: 0
+    path: Assets/Scenes/Hacking1 1.unity
+    guid: 29801951fb4fff44789e3021e9d236d0
+  - enabled: 0
+    path: Assets/Scenes/Hacking1 2.unity
+    guid: 5464407c0794076439e2f68db95a9cdf
   m_configObjects: {}
