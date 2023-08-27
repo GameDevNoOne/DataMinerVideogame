@@ -8,6 +8,7 @@ using UnityEngine.Rendering.Universal;
 public class MailHandler : MonoBehaviour
 {
     public GameObject Mail;
+    public GameObject IPComputer;
 
     public TextMeshProUGUI IPAddress;
     public TextMeshProUGUI Email;
@@ -43,6 +44,7 @@ public class MailHandler : MonoBehaviour
         Address.text = Header;
         Sender.text = sender;
 
+        i = IPComputer.GetComponent<InputManager>().i;
     }
 
 

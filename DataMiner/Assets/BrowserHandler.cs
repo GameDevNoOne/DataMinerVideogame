@@ -6,6 +6,7 @@ using UnityEngine;
 public class BrowserHandler : MonoBehaviour
 {
     public GameObject Chrome;
+    public GameObject IP;
 
     public TextMeshProUGUI NewsArticle1;
     public TextMeshProUGUI NewsArticleName1;
@@ -56,5 +57,7 @@ public class BrowserHandler : MonoBehaviour
         NewsArticleName3.text = TitleTr;
         NewsArticle4.text = NewsArticleF;
         NewsArticleName4.text = TitleF;
+
+        i = IP.GetComponent<InputManager>().i;
     }
 }

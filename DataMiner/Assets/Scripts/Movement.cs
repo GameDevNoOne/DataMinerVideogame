@@ -19,6 +19,14 @@ public class Movement : MonoBehaviour
     private float dashCounter;
     private float dashCooldownCounter;
 
+    [Header("Respawning")]
+    public Transform respawnPoint;
+
+    public void Awake()
+    {
+        gameObject.transform.position = respawnPoint.position;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
