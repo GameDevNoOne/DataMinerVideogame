@@ -21,6 +21,8 @@ public class Movement : MonoBehaviour
 
     [Header("Respawning")]
     public Transform respawnPoint;
+    public int collectedInfoBits;
+    public int collectedLocBits;
 
     public void Awake()
     {
@@ -91,6 +93,18 @@ public class Movement : MonoBehaviour
         {
             activeMoveSpeed = dashSpeed;
             dashCounter = dashLength;
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Information"))
+        {
+            collectedInfoBits++;
+        }
+        if (collision.transform.CompareTag("Location"))
+        {
+            collectedLocBits++;
         }
     }
 }

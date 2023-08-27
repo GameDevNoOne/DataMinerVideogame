@@ -6,14 +6,36 @@ using UnityEngine.Tilemaps;
 public class CollisionDetection : MonoBehaviour
 {
     public int Health;
-    public int collected;
+    public bool isLocDestroyed;
+    public bool isInfoDestroyed;
+
+    public void Start()
+    {
+        isLocDestroyed = false;
+        isInfoDestroyed = false;
+    }
 
     public void TakeDamage(int damage)
     {
         Health -= damage;
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            if (gameObject.CompareTag("InformationBit")) 
+            {
+                isInfoDestroyed = true;
+                Invoke("DestroyBit", 0.5f);
+            }
+            if (gameObject.CompareTag("LocationBit"))
+            {
+                isLocDestroyed = true;
+                Invoke("DestroyBit", 0.5f);
+            }
+            Invoke("DestroyBit", 0.1f);
         }
+    }
+
+    public void DestroyBit()
+    {
+        Destroy(gameObject);
     }
 }

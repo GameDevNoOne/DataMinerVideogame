@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
     public GameObject[] ipComputers;
     public GameObject hackingShip;
     public GameObject camera;
-    public GameObject bullet;
+    public GameObject player;
     public int[] informationBitsNeeded;
     public int neededinformationBits;
     public int informationBits;
@@ -49,8 +49,8 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        locationBits = bullet.GetComponent<DamagingBullet>().collectedLoc;
-        informationBits = bullet.GetComponent<DamagingBullet>().collectedInfo;
+        locationBits = player.GetComponent<Movement>().collectedLocBits;
+        informationBits = player.GetComponent<Movement>().collectedInfoBits;
 
         if (locationBits == neededlocationBits || informationBits == neededinformationBits || informationBits == neededinformationBits && locationBits == neededlocationBits)
         {
