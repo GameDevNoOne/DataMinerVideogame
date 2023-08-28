@@ -8,6 +8,8 @@ TagManager:
   - Bits
   - InformationBit
   - LocationBit
+  - Information
+  - Location
   layers:
   - Default
   - TransparentFX

@@ -23,6 +23,9 @@ public class Movement : MonoBehaviour
     public Transform respawnPoint;
     public int collectedInfoBits;
     public int collectedLocBits;
+    public int i;
+    public int oldi = 0;
+    public GameObject inputManager;
 
     public void Awake()
     {
@@ -40,8 +43,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        i = inputManager.GetComponent<InputManager>().i;
         Moving();
         Rotation();
+        if (i == oldi+1)
+        {
+            collectedInfoBits = 0;
+            collectedLocBits = 0;
+            gameObject.transform.position = respawnPoint.position;
+            oldi += 1;
+        }
     }
 
     public void Moving()
@@ -100,11 +111,11 @@ public class Movement : MonoBehaviour
     {
         if (collision.transform.CompareTag("Information"))
         {
-            collectedInfoBits++;
+            collectedInfoBits+=1;
         }
         if (collision.transform.CompareTag("Location"))
         {
-            collectedLocBits++;
+            collectedLocBits+=1;
         }
     }
 }

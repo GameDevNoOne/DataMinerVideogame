@@ -9,10 +9,4 @@ public class CollectedBitsHandler : MonoBehaviour
 
     public GameObject infoBits;
     public GameObject locBits;
-
-    public void Update()
-    {
-        infoBitsCollected = infoBits.GetComponent<CollisionDetection>().infocollected;
-        locBitsCollected = locBits.GetComponent<CollisionDetection>().loccollected;
-    }
 }

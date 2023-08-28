@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
     public int locationBits;
 
     public int i;
+    public int oldi;
 
     [Header("Computer")]
     public GameObject Canvas;

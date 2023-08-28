@@ -145,7 +145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 80
-  collected: 0
+  isLocDestroyed: 0
+  isInfoDestroyed: 0
+  info: {fileID: 2635940884673870114, guid: 6cfdbb8163a5591419997443a532c2a1, type: 3}
+  location: {fileID: 4060019832303874481, guid: 3555eac3c2a4c204b8ae1188ff4902bd, type: 3}
 --- !u!114 &4548470529199601644
 MonoBehaviour:
   m_ObjectHideFlags: 0
