@@ -8,11 +8,17 @@ public class PMHandler : MonoBehaviour
     public GameObject Option1;
     public GameObject Option2;
 
+    public string Answer1;
+    public string Answer2;
+
     public string Choice1;
     public string Choice2;
 
     public TextMeshProUGUI Option;
     public TextMeshProUGUI OptionT;
+
+    public TextMeshProUGUI Answer;
+    public TextMeshProUGUI AnswerT;
 
     public int i;
 
