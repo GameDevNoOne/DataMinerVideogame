@@ -14,11 +14,15 @@ public class PMHandler : MonoBehaviour
     public string Choice1;
     public string Choice2;
 
+
     public TextMeshProUGUI Option;
     public TextMeshProUGUI OptionT;
 
     public TextMeshProUGUI Answer;
     public TextMeshProUGUI AnswerT;
+
+    public bool chosen1;
+    public bool chosen2;
 
     public int i;
 
@@ -41,5 +45,18 @@ public class PMHandler : MonoBehaviour
 
         Option.text = Choice1;
         OptionT.text = Choice2;
+    }
+
+    public void Chosen()
+    {
+        i++;
+        if (chosen1) 
+        {
+            Answer.text = Answer1;
+        }
+        else if (chosen2)
+        {
+            AnswerT.text = Answer2;
+        }
     }
 }
